@@ -19,8 +19,10 @@ function App() {
 
     setLoading(true);
 
+    const API_URL = "https://ai-resume-backend-41t8.onrender.com";
+
     try {
-      const res = await fetch("https://ai-resume-backend-41t8.onrender.com/", {
+      const res = await fetch(`${API_URL}/analyze`, {
         method: "POST",
         body: formData,
       });
